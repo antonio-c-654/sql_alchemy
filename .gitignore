@@ -1,0 +1,8 @@
+# created by virtualenv automatically
+node_modules
+.env/
+.venv/
+venv/
+.vscode/
+__pycache__
+*.rar
