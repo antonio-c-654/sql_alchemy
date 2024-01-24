@@ -1,12 +1,16 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 #app de ORM
 app = Flask(__name__)
 
 #lo de dentro de [] lo saca de la docuentacion # antonio es la PASSWORD
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:antonio@localhost/flaskmysql'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 #contexto para el db.create_all()
