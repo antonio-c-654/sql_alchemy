@@ -6,3 +6,4 @@ venv/
 .vscode/
 __pycache__
 *.rar
+app_2.py

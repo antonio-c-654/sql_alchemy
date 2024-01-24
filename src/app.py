@@ -10,7 +10,8 @@ load_dotenv()
 app = Flask(__name__)
 
 #lo de dentro de [] lo saca de la docuentacion # antonio es la PASSWORD
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://ulum94vn2txz6k7n:sZbrJSb3eMem2TtCGQdE@bhmqbm6yyfyjadntkqcl-mysql.services.clever-cloud.com:3306/bhmqbm6yyfyjadntkqcl' 
+#os.getenv('SQLALCHEMY_DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 #contexto para el db.create_all()
